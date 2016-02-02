@@ -1,0 +1,24 @@
+{
+  "name": "l5admin",
+  "authors": [
+    "Saiful Azhar <saiful.azhar@ingeniworks.com.my>"
+  ],
+  "description": "laravel 5 admin",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.9",
+    "bootstrap-chosen": "^1.0.1",
+    "chosen": "^1.4.2"
+  }
+}
