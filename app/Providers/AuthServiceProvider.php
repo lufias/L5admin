@@ -30,7 +30,9 @@ class AuthServiceProvider extends ServiceProvider
 
         // set up beforeCallback (useful for example to set up super admin all permission)
         $gate->before(function($user, $ability){
-            return $user->is_super == 1;            
+            if($user->is_super == 1){
+                return true;
+            }            
         });
 
         // or if it comes from tables
