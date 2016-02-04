@@ -7,11 +7,11 @@ class UserAuthenticationRepository implements UserAuthenticationInterface {
 	public function authenticate($email, $password){
 		// check if this user even exist in the first place
 		if(! $user = User::where('email', $email)->first()){
-			throw new \ModelNotFoundException('User not found');
+			throw new \L5Admin\Exceptions\ModelNotFoundException('User not found');
 		}
 		// check the password
 		if (! Hash::check($password, $user->password)){
-			throw new \PasswordCheckException('Password Invalid');
+			throw new \L5Admin\Exceptions\PasswordCheckException('Password Invalid');
 		}		
 
 		// log the user in

@@ -34,12 +34,12 @@ class AuthController extends Controller
             $request->session()->put('full_name', \Auth::User()->full_name);
 
     	}
-    	catch(\ModelNotFoundException $error){
+    	catch(\L5Admin\Exceptions\ModelNotFoundException $error){
     		$request->session()->flash('error', 'User Not Found');
     		return back()->withInput();
 
     	}
-    	catch(\PasswordCheckException $error){
+    	catch(\L5Admin\Exceptions\PasswordCheckException $error){
     		$request->session()->flash('error', 'Incorrect Password');
     		return back()->withInput();
     	}
